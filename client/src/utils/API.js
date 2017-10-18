@@ -28,5 +28,10 @@ export default {
   },
   deleteArticle: function(headline) {
     return axios.post("/delete/", headline);
+  },
+  test: function() {
+    console.log("here in API?");
+    return axios.get("/")
+    .then(res => console.log(res));
   }
 };
