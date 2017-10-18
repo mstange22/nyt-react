@@ -1,0 +1,41 @@
+.jumbotron {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 960px;
+    max-width: 95%;
+    background-color: white;
+    border: 2px solid black;
+}
+
+#search-jumbo,
+#results-jumbo,
+#saved-jumbo {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.container-fluid .jumbotron {
+    padding: 10px 20px;
+    border-radius: 0px;
+}
+
+.jumbotron h1 {
+    font-size: 36px;
+    border-bottom: 2px solid black;
+    margin-top: 0px;
+    padding-bottom: 5px;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 28px;
+    color: black;
+}
+
+input {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 75%;
+}
