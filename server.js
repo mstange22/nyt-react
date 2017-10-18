@@ -31,6 +31,13 @@ app.use(express.static("public"));
 // app.use(routes);
 require("./controllers/articleController")(app);
 
+
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  // console.log("here on server?");
+  // res.sendFile("../client/build/index.html");
+});
+
 app.listen(PORT, function() {
     console.log("App running on http://localhost:" + PORT);
 });
