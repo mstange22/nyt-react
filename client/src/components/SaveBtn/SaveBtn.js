@@ -2,8 +2,8 @@ import React from "react";
 import "./SaveBtn.css";
 
 const SaveBtn = props => (
-  <button className="save-btn btn btn-default" {...props}>
-    Save Article
+  <button className="save-btn btn btn-default btn-sm" {...props}>
+    Save
   </button>
 );
 
