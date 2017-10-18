@@ -2,6 +2,8 @@ const express = require("express");
 var logger = require("morgan");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+var path = require("path");
+
 const PORT = process.env.PORT || 3001;
 
 mongoose.Promise = Promise;
