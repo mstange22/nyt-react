@@ -21,10 +21,10 @@ class Articles extends Component {
     this.loadSavedArticles();
   }
 
-  test() {
-    console.log("amihere?");
-    API.test();
-  }
+  // test() {
+  //   console.log("amihere?");
+  //   API.test();
+  // }
 
   loadSavedArticles = () => {
     API.getArticles()
@@ -81,7 +81,7 @@ class Articles extends Component {
         <Row>
           <Col size="md-12">
             <Jumbotron id="search-jumbo">
-              <button onClick={this.test}>Test</button>
+              {/* <button onClick={this.test}>Test</button> */}
               <h1>Search</h1>
               <form>
               <Label>Topic: {this.state.topic}</Label>

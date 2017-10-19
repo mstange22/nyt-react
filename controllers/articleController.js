@@ -1,6 +1,7 @@
 const request = require("request");
 let Note = require("../models/Note.js");
 let Article = require("../models/Article.js");
+var path = require("path");
 
 let scrapedArticles = [];
 let existingArticles = [];
@@ -88,11 +89,6 @@ module.exports = function(app) {
 
     app.post("/save", function(req, res) {
 
-        console.log("req.body: " + req.body);
-        console.log("req.body.headline: " + req.body.headline);
-        console.log("req.body.date: " + req.body.date);
-        console.log("req.body.url: " + req.body.url);
-
         let newArticle = Article({
             headline: req.body.headline,
             date: req.body.date,
@@ -107,4 +103,9 @@ module.exports = function(app) {
             res.json(data);
         });
     });
+    
+    app.get("*", function(req, res) {
+        res.sendFile(path.join(__dirname, "../client/build/index.html"));
+    });
+  
 }

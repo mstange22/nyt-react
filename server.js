@@ -27,7 +27,6 @@ mongoose.connect(db, function(error) {
 });
 
 // app.use(express.static("public")); 
-
 app.use(express.static("client/build"));
 
 require("./controllers/articleController")(app);
