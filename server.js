@@ -2,7 +2,6 @@ const express = require("express");
 var logger = require("morgan");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
-var path = require("path");
 
 const PORT = process.env.PORT || 3001;
 
@@ -27,18 +26,11 @@ mongoose.connect(db, function(error) {
   }
 });
 
-app.use(express.static("public"));
+// app.use(express.static("public")); 
 
-// Add routes, both API and view
-// app.use(routes);
+app.use(express.static("client/build"));
+
 require("./controllers/articleController")(app);
-
-
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-  // console.log("here on server?");
-  // res.sendFile("../client/build/index.html");
-});
 
 app.listen(PORT, function() {
     console.log("App running on http://localhost:" + PORT);
