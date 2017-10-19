@@ -21,11 +21,6 @@ class Articles extends Component {
     this.loadSavedArticles();
   }
 
-  // test() {
-  //   console.log("amihere?");
-  //   API.test();
-  // }
-
   loadSavedArticles = () => {
     API.getArticles()
       .then(res =>
@@ -69,10 +64,7 @@ class Articles extends Component {
     }
 
     // clear out input forms on submit
-    this.setState({
-      topic: "",
-      startDate: "",
-      endDate: ""});
+    this.setState( { topic: "", startDate: "", endDate: "" } );
   };
 
   render() {
@@ -107,7 +99,7 @@ class Articles extends Component {
                 <Col size="md-6">
                   <Label>End Year: {this.state.endDate}</Label>
                   <Input
-                    value={this.state.synopsis}
+                    value={this.state.endDate}
                     onChange={this.handleInputChange}
                     name="endDate"
                     type="number"
