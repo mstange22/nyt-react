@@ -3,4 +3,10 @@ nav {
     font-size: 44px;
     border-bottom: 2px solid black;
     padding-bottom: 10px;
+    background-color: #eeeeee;
+}
+
+nav h1 {
+    margin-top: 0px;
+    padding-top: 20px;
 }

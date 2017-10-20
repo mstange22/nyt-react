@@ -112,6 +112,7 @@ class Articles extends Component {
               <Row>
                 <Col size="md-12">
                   <FormBtn
+                    id="submit-btn"
                     disabled={!(this.state.topic)}
                     onClick={this.handleFormSubmit}
                   >

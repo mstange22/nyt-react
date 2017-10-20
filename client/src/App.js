@@ -9,7 +9,7 @@ const App = () =>
 <Router>
   <div>
     <Nav />
-      <Route exact path="/" component={Articles} />
+      <Route path="/" component={Articles} />
       <Route exact path="/saved" component={Saved} />
   </div>
 </Router>;
